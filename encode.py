@@ -26,6 +26,31 @@ def encode(input_string_pass):
     except:
         print("Error")
 
+def decode(encoded):
+            
+    try:
+        
+        list_pass = []
+
+        for i in encoded:
+            list_pass.append(i)
+
+        decoded_list = []
+
+        for i in list_pass:
+            i = int(i)
+            i -= 3
+            i = str(i)
+            decoded_list.append(i)
+            
+        decoded = ''.join(decoded_list)
+        print(f'The encoded password is {encoded}, and the original password is {decoded}.')
+        return decoded
+    
+    except:
+        print("Error")
+
+
 def main():
     user_choice = None
 
@@ -39,10 +64,10 @@ def main():
         user_choice = int(input("\nPlease enter an option: "))
 
         if user_choice == 1:
-            encode(input("Please enter your password to encode: "))
+            encoded = encode(input("Please enter your password to encode: "))
 
         elif user_choice == 2:
-            decode(input(""))
+            decode(encoded)
 
         elif user_choice == 3:
             break
