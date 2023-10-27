@@ -3,6 +3,7 @@ Lab 6
 Alexander F & Jacob F
 '''
 
+# encode function
 def encode(input_string_pass):
     try:
 
@@ -26,6 +27,7 @@ def encode(input_string_pass):
     except:
         print("Error")
 
+# decode function
 def decode(encoded):
             
     try:
@@ -50,7 +52,7 @@ def decode(encoded):
     except:
         print("Error")
 
-
+# main function 
 def main():
     user_choice = None
 
